@@ -1,0 +1,23 @@
+<h1>Products</h1>
+
+<button --on="click: @sort">Sort by price</button>
+
+<section class="results" --foreach="products">
+  {{#each products}}
+
+    <div class="product">
+      <h3 --text="name">{{ name }}</h3>
+      <div class="info">
+        <img src="{{ image }}" --prop="src: image"/>
+        <div>
+          <p --text="price|price">{{ price }}</span></p>
+          <p --text="desc">{{ description }}</p>
+          <p>
+            <button --on="click: @remove">remove</button>
+          </p>
+        </div>
+      </div>
+    </div>
+
+  {{/each}}
+</section>

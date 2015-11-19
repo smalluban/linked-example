@@ -1,0 +1,31 @@
+{
+  "type": "array",
+  "minItems": 40,
+  "items": {
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string",
+        "faker": "commerce.productName"
+      },
+      "description": {
+        "type": "string",
+        "faker": "lorem.sentences"
+      },
+      "price": {
+        "type": "number",
+        "faker": "commerce.price"
+      },
+      "image": {
+        "type": "string",
+        "faker": "image.image"
+      }
+    },
+    "required": [
+      "name",
+      "description",
+      "price",
+      "image"
+    ]
+  }
+}
